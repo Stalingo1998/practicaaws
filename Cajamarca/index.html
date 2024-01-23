@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <!-- Bootstrap Java script -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ <!-- IMPORTANDO API GOOGLE  MAPS -->
+ <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQ17hYT5_W1YJrdqxQD4FY-bNqv6aFN5U&libraries=places&callback=initMap">
+ </script>
+	<link href="jquery-ui.css" rel="stylesheet">
+	<style>
+	body{
+		font-family: "Trebuchet MS", sans-serif;
+		margin: 0px;
+	}
+	.demoHeaders {
+		margin-top: 2em;
+	}
+	#dialog-link {
+		padding: .4em 1em .4em 20px;
+		text-decoration: none;
+		position: relative;
+	}
+	#dialog-link span.ui-icon {
+		margin: 0 5px 0 0;
+		position: absolute;
+		left: .2em;
+		top: 50%;
+		margin-top: -8px;
+	}
+	#icons {
+		margin: 0;
+		padding: 0;
+	}
+	#icons li {
+		margin: 2px;
+		position: relative;
+		padding: 4px 0;
+		cursor: pointer;
+		float: left;
+		list-style: none;
+	}
+	#icons span.ui-icon {
+		float: left;
+		margin: 0 4px;
+	}
+	.fakewindowcontain .ui-widget-overlay {
+		position: absolute;
+	}
+	select {
+		width: 200px;
+	}
+	img {
+  display: block;
+  width: 60%;
+  margin: auto;
+}
+/* Estilos para el pie de página */
+.footer {
+  background-color: #333; /* Cambia el color de fondo según tu diseño */
+  color: #fff; /* Cambia el color del texto según tu diseño */
+  padding: 40px 0; /* Añade espaciado interno superior e inferior */
+}
+
+.footer h3 {
+  color: #fff; /* Cambia el color de los títulos según tu diseño */
+}
+
+.footer ul {
+  list-style: none; /* Quita los estilos de lista */
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+}
+
+.footer ul li a {
+  color: #fff; /* Cambia el color de los enlaces según tu diseño */
+  text-decoration: none; /* Quita la subrayado de los enlaces */
+}
+
+.footer ul li a:hover {
+  text-decoration: underline; /* Subrayado al pasar el mouse por encima */
+}
+
+	</style>
+
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"> <img src="img/logo.png" alt="" style="width: 10%; "> </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pasatiempos.html">Pasatiempos</a>
+        </li>
+				<li class="nav-item">
+          <a class="nav-link" href="hojadevid.html">Deportes</a>
+        </li>
+				<li class="nav-item">
+          <a class="nav-link" href="experiencia.html">Experiencia laboral</a>
+        </li>
+				<li class="nav-item">
+          <a class="nav-link" href="estudios.html">Nuestros estudios</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<body>
+
+<h1>BIENBENIDO A MI PAGINA</h1>
+<div class="ui-widget">
+	<p>Este sitio esta orientada a dar informacion mia la cual se iran dividiendo en las difrentes paginas que tiene este sitio</p>
+</div>
+<center>
+<img src="img/yo.jpg" alt="" style="width: 10%;">
+</center>
+
+<h1>Biografia</h1>
+
+<!-- Tabs -->
+<h2 class="demoHeaders">Cajamarca Pucachaqui Danny Santiago</h2>
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Niñes</a></li>
+		<li><a href="#tabs-2">Adolescencia</a></li>
+		<li><a href="#tabs-3">Adultes</a></li>
+	</ul>
+	<div id="tabs-1">Soy Danny Santiago Cajamarca Pucachaqui. Nací el 19 de noviembre de 2001. Inicié mis estudios en la Unidad Educativa ‘Monseñor Antonio González’, desde el jardín hasta el séptimo de básica.
+	<img src="img/1.jpg" alt=""> </div>
+	<div id="tabs-2">A continuación, continué mis estudios en el Colegio ‘Patrimonio de la Humanidad’. En este período, experimenté diversas situaciones que me enseñaron mucho sobre la vida. Estudié desde octavo hasta décimo de básica. Luego, me tocó tomar una decisión que marcaría mi vida, ya que en dicho colegio ofrecían un bachillerato técnico. Tuve que elegir entre seguir un bachillerato en ciencias o uno en informática. Me satisface haber tomado la decisión correcta, ya que desde que inicié el bachillerato, me atrajo el mundo de los sistemas, un ámbito muy amplio que abarca la programación, las redes y el análisis, aspectos que disfruté mucho.
+	<img src="img/2.jpg" alt=""> </div>
+	<div id="tabs-3"> Una vez graduado, lo único que sabía es que quería dedicarme a sistemas y ser ingeniero. Durante mi tiempo como graduado, hubo varios obstáculos que me limitaron, principalmente la SENESCYT, ya que no logré conseguir un cupo a la primera. Sin embargo, seguí intentando y finalmente obtuve un cupo para la Universidad Técnica de Cotopaxi. Acepté la oportunidad en plena pandemia y comencé a estudiar de forma virtual. Pasé la nivelación y continué con los ciclos. En el tercer ciclo, llegó el momento de retomar la presencialidad. No fue fácil tomar la decisión de venir a vivir a Latacunga solo, pero después de reflexionarlo bien, fue la mejor opción. Esta experiencia me hizo más responsable con mis responsabilidades. Me ha brindado grandes enseñanzas, lo cual me impulsó a continuar con la misma dedicación con la que inicié, y seguir hasta alcanzar el objetivo. Ahora me encuentro en el séptimo ciclo de Ingeniería en Sistemas de Información y trabajo junto a un negocio familiar. Esta es la historia de mis 22 años; sé que aún hay más por vivir, pero todo esto me ha enseñado mucho.
+	<img src="img/3.jpeg" alt=""> </div>
+</div>
+<script src="external/jquery/jquery.js"></script>
+<script src="jquery-ui.js"></script>
+<script>
+$( "#accordion" ).accordion();
+
+var availableTags = [
+	"ActionScript",
+	"AppleScript",
+	"Asp",
+	"BASIC",
+	"C",
+	"C++",
+	"Clojure",
+	"COBOL",
+	"ColdFusion",
+	"Erlang",
+	"Fortran",
+	"Groovy",
+	"Haskell",
+	"Java",
+	"JavaScript",
+	"Lisp",
+	"Perl",
+	"PHP",
+	"Python",
+	"Ruby",
+	"Scala",
+	"Scheme"
+];
+$( "#autocomplete" ).autocomplete({
+	source: availableTags
+});
+
+$( "#button" ).button();
+$( "#button-icon" ).button({
+	icon: "ui-icon-gear",
+	showLabel: false
+});
+
+$( "#radioset" ).buttonset();
+
+$( "#controlgroup" ).controlgroup();
+
+$( "#tabs" ).tabs();
+
+$( "#dialog" ).dialog({
+	autoOpen: false,
+	width: 400,
+	buttons: [
+		{
+			text: "Ok",
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		},
+		{
+			text: "Cancel",
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		}
+	]
+});
+
+// Link to open the dialog
+$( "#dialog-link" ).click(function( event ) {
+	$( "#dialog" ).dialog( "open" );
+	event.preventDefault();
+});
+
+$( "#datepicker" ).datepicker({
+	inline: true
+});
+
+$( "#slider" ).slider({
+	range: true,
+	values: [ 17, 67 ]
+});
+
+$( "#progressbar" ).progressbar({
+	value: 20
+});
+
+$( "#spinner" ).spinner();
+
+$( "#menu" ).menu();
+
+$( "#tooltip" ).tooltip();
+
+$( "#selectmenu" ).selectmenu();
+
+// Hover states on the static widgets
+$( "#dialog-link, #icons li" ).hover(
+	function() {
+		$( this ).addClass( "ui-state-hover" );
+	},
+	function() {
+		$( this ).removeClass( "ui-state-hover" );
+	}
+);
+</script>
+</body>
+</html>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <h3>Enlaces</h3>
+        <ul>
+          <li><a href="indes.html">Inicio</a></li>
+          <li><a href="estudios.html">Estudios</a></li>
+          <li><a href="experiencia.html">Experiencia</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h3>Contacto</h3>
+        <p>Correo electrónico: danny.cajamarca8695@utc.edu.ec</p>
+        <p>Teléfono: 099 987 6378</p>
+      </div>
+      <div class="col-lg-4">
+        <h3>Derechos de autor</h3>
+        <p>(c) 2023 Cajamarca Pucachaqui Danny Santiago. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </div>
+</footer>
